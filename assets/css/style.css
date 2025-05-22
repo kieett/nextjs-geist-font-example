@@ -1,0 +1,380 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Product Card Hover Effect */
+.product-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+    opacity: 0.9;
+}
+
+/* Button Hover Effects */
+.btn-primary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.2);
+    transition: width 0.3s ease;
+}
+
+.btn-primary:hover:after {
+    width: 100%;
+}
+
+/* Form Input Focus Effects */
+.form-input:focus {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Navigation Menu Hover Effects */
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* Category Badge */
+.category-badge {
+    transition: all 0.3s ease;
+}
+
+.category-badge:hover {
+    transform: scale(1.05);
+}
+
+/* Price Filter Range */
+.price-range {
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+}
+
+.price-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.price-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Cart Item Animation */
+.cart-item {
+    transition: background-color 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+/* Quantity Input Buttons */
+.quantity-btn {
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+
+/* Alert Messages */
+.alert {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal Animation */
+.modal {
+    animation: modalFade 0.3s ease-out;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+
+.tooltip:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Image Gallery */
+.gallery-image {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Size Selection */
+.size-option {
+    transition: all 0.2s ease;
+}
+
+.size-option:hover {
+    transform: translateY(-2px);
+}
+
+.size-option.selected {
+    background-color: #000;
+    color: white;
+}
+
+/* Color Selection */
+.color-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.2);
+}
+
+.color-option.selected {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+
+/* Review Stars */
+.star {
+    color: #ffd700;
+    transition: transform 0.2s ease;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+/* Chatbot */
+#chatbot-container {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Search Results */
+.search-result {
+    transition: all 0.2s ease;
+}
+
+.search-result:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* Newsletter Form */
+.newsletter-input {
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Social Media Icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #000;
+}
+
+/* Footer Links */
+.footer-link {
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #000;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1.125rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .container {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+}
